@@ -1,0 +1,8 @@
+# Rust
+target/
+pkg/
+Cargo.lock
+
+# Web
+node_modules/
+package-lock.json
