@@ -45,6 +45,8 @@ const runWasm = async () => {
   * Por ejemplo, `let wasmMemory = new Uint8Array (rustWasm.memory.buffer);`
   * En este ejemplo, no lo hicimos, pero tenga en cuenta que esto puede suceder
    */
+
+   helloWorld.console_log_from_wasm()
 }
 
 runWasm()

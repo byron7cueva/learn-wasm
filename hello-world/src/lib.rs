@@ -58,3 +58,19 @@ pub fn read_wasm_memory_buffer_and_return_index_one() -> u8 {
     }
     value
 }
+
+// Importando funciones de javascript
+// Definiendo una externa funcion importada desde JS
+#[wasm_bindgen]
+extern "C" {
+    // Usando el js_namespace
+    // Se esta bbindiando console.log a log
+    #[wasm_bindgen(js_namespace = console)]
+    fn log(s: &str);
+}
+
+// Exportando la funcion para poderla llamar desde JS
+#[wasm_bindgen]
+pub fn console_log_from_wasm() {
+    log("This console.log from wasm");
+}
