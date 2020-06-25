@@ -8,8 +8,12 @@ const runWasm = async () => {
   // Llamando a la funcion add exportada desde wasm y guardando el resultado
   const addResult = helloWWord.add(24, 24)
 
+  const result = helloWWord.call_me_from_javascript(24, 24)
+
   // Añadiendo el resultado dentro del body
   document.body.textContent = `Hola mundo addResult: ${addResult}`
+
+  console.log(result)
 }
 
 runWasm()
